@@ -28,12 +28,12 @@ public class CameraMovement : MonoBehaviour {
         Debug.Log(vek.ToString());
         if (MyCamera)
         {
-            if (Mathf.Abs(vek.x) > 5 * 1.6282061666666666f|| Mathf.Abs(vek.y)>5)
+            if (Mathf.Abs(vek.x) > 7.5||Mathf.Abs(vek.y)>5.3)
             {
-                if(Mathf.Abs(vek.x)>Mathf.Abs(vek.y) * 1.6282061666666666f)
-                MyCamera.orthographicSize = Mathf.Abs(vek.x)  ;
+                if(Mathf.Abs(vek.x)>Mathf.Abs(vek.y)*2.2f)
+                MyCamera.orthographicSize = Mathf.Abs(vek.x) * 0.65f+1.5f;
                 else
-                MyCamera.orthographicSize = Mathf.Abs(vek.y)+1f;
+                MyCamera.orthographicSize = Mathf.Abs(vek.y)+1.5f;
             }
 
 
